@@ -12,6 +12,7 @@ export default function ItemsContainer({data, clothingProduct, handleAddToChecko
                 
                 if (!details) return null;
 
+
                 return (<ItemCard key={ClothingProduct.id} {...ClothingProduct}
                         clothingProduct={details}
                         handleChangeQuantity={(delta: number) =>

@@ -1,4 +1,5 @@
 import './App.css';
+import CheckoutContainer from './Components/CheckoutContainer';
 import ThriftHappens from './Components/Thrift-Happens';
 import { products } from "./data/data";
 
@@ -8,6 +9,7 @@ function App() {
     <>
     <h1><b>Thrift Happens</b></h1>
     <ThriftHappens data={products} />
+    <CheckoutContainer data={products}/>
     </>
   )
 }

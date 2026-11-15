@@ -4,7 +4,7 @@ import ItemsContainer from "./ItemsContainer";
 import { useState } from "react";
 
 
-export interface ClothesData{
+interface ClothesData{
     data: ClothingProduct[];
 }
 
@@ -59,6 +59,7 @@ export default function ThriftHappens({data}: ClothesData) {
 
     //Handlers
 
+    //changes quantity
     function handleChangeQuantity(id: number, delta: number){
         setClothingProduct((prevData) => {
            return prevData.map((info) => 
@@ -68,16 +69,19 @@ export default function ThriftHappens({data}: ClothesData) {
         });
     }
 
+    //adds items to checkout
     function handleAddToCheckout(selectedItem: SelectedItem){
         setCheckoutItems((previousItems) => {
             return[...previousItems, {...selectedItem}];
         })
     }
 
+    //empties cart
     function handleEmptyCart(){
         setCheckoutItems([]);
     }
 
+    //removes an item from the cart, if it worked :(
     function handleRemoveOneFromCart(id: number){
         setCheckoutItems((prevItems) => {return prevItems.filter((item) => item.id !== id)});
     
