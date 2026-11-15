@@ -15,7 +15,7 @@ export default function ItemsContainer({data, clothingProduct, handleAddToChecko
                 return (<ItemCard key={ClothingProduct.id} {...ClothingProduct}
                         clothingProduct={details}
                         handleChangeQuantity={(delta: number) =>
-                            handleChangeQuantity(clothingProduct.id, delta)}
+                            handleChangeQuantity(ClothingProduct.id, delta)}
                         
                             handleAddToCheckout={handleAddToCheckout}
                         />);

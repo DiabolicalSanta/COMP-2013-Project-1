@@ -29,7 +29,7 @@ export default function ItemCard({image, name, clothingProduct, handleAddToCheck
             <button onClick={() => handleChangeQuantity(-1)}>+</button>
             <p>Item Quantity: {clothingProduct.itemQuantity}</p>
             <button onClick={() => handleChangeQuantity(+1)}>-</button>
-            
+            <button onClick={() => handleAddToCheckout}>Add To Cart</button>
         </div>
     )
 }
